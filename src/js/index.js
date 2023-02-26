@@ -28,7 +28,7 @@ function showCard(icon, country, location, currTempC, currTempF, feelLikeC, feel
             <p class="m-0 text-muted">Local time: ${localtime}</p>
             <p class="m-0 p-0 card-weather-overall text-muted">Weather: ${weather}</p>
             <p class="m-0 text-muted">Humidity: ${humidity}%</p>
-            <p class="m-0 text-muted">Wind: ${windKph} km/h (${windMph} mph)</p> v
+            <p class="m-0 text-muted">Wind: ${windKph} km/h (${windMph} mph)</p>
         </div>
     </div>
 </div>`
@@ -54,7 +54,6 @@ form.onsubmit = async (e) => {
         showError(data.error.message);
         searchInput.value = '';
     } else {
-        removeError()
         showCard(data.current.condition.icon, data.location.country, data.location.name, data.current.temp_c, data.current.temp_f, data.current.feelslike_c, data.current.feelslike_f, data.location.region, data.location.localtime, data.current.condition.text, data.current.humidity, data.current.wind_kph, data.current.wind_mph);
         
     }
