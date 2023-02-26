@@ -56,3 +56,12 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.card{
+  &-text{
+    line-height: 10 px;
+  }
+  &-weather-overall{
+    font-size: 15px;
+  }
+}
